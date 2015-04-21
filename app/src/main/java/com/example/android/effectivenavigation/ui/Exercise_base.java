@@ -124,6 +124,10 @@ public class Exercise_base extends Activity {
     ProgressDialog mDialog;
 
     private TextView countText;
+    private TextView repetitionText;
+    private TextView forceText;
+    private TextView powerText;
+    private TextView timeText;
 
     private ToggleButton togglebut;
     private ArrayAdapter<String> adapter_state;
@@ -241,6 +245,14 @@ public class Exercise_base extends Activity {
         countText = (TextView)findViewById(R.id.textView);
         countText.setText("5:00");
 
+        repetitionText = (TextView)findViewById(R.id.text_rep);
+
+        forceText = (TextView)findViewById(R.id.text_force);
+        powerText = (TextView)findViewById(R.id.text_power);
+        timeText = (TextView)findViewById(R.id.text_time);
+
+
+
         measuresList = new ArrayList<Measure>();
         fallmeasuresList = new ArrayList<FallMeasure>();
         usersList = new ArrayList<User>();
@@ -270,6 +282,17 @@ public class Exercise_base extends Activity {
         editor.commit(); // commit changes
 
     }
+
+
+    /**
+     * Sets a number of repetitions perfromed in an activity
+     */
+    public void setRepetitionNumb(int repetitionNumber){
+        editor.putInt("repetitions", repetitionNumber);
+        editor.commit(); // commit changes
+
+    }
+
 
 
     public void addListenerOnButton() {
@@ -394,6 +417,9 @@ public class Exercise_base extends Activity {
         CountDownTimer cdt;
         MyCountDownTimerX cucu;
 
+        private int repetitionCount;
+
+
         private void StartToggle(){
             togglebut.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
@@ -404,7 +430,7 @@ public class Exercise_base extends Activity {
 
                         System.err.println("********************* START BUTTON IS PRESSED **************");
 
-                        System.out.println("ON");
+                        repetitionCount = 0;
 
                         togglebut.setClickable(false);
 
@@ -415,6 +441,8 @@ public class Exercise_base extends Activity {
                             public void onTick(long millisUntilFinished) {
                                 countText.setTextColor(Color.RED);
                                 countText.setText("  " + millisUntilFinished / 1000+ " : "+millisUntilFinished/60);
+
+
 
                             }
 
@@ -472,12 +500,6 @@ public class Exercise_base extends Activity {
 
 
 
-
-
-
-
-
-
         TextView timerTextView;
         long startTime = 0;
 
@@ -493,7 +515,8 @@ public class Exercise_base extends Activity {
                 seconds = seconds % 60;
 
                 countText.setTextColor(Color.GREEN);
-                countText.setText("Sensing: "+ String.format("%d:%02d", minutes, seconds));
+                countText.setText("Sensing: " + String.format("%d:%02d", minutes, seconds));
+                timeText.setText(String.format("%d:%02d", minutes, seconds));
 
                 timerHandler.postDelayed(this, 500);
             }
@@ -583,7 +606,7 @@ public class Exercise_base extends Activity {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
             AlertDialog.Builder alertDialogBuilder2 = new AlertDialog.Builder(context);
 
-            alertDialogBuilder.setTitle("Fråga");
+            alertDialogBuilder.setTitle("Save");
             //alertDialogBuilder2.setTitle("wait");
 
             alertDialogBuilder.setMessage("Save the measurements?")
@@ -864,6 +887,9 @@ public class Exercise_base extends Activity {
         public void onSensorChanged(SensorEvent sensorEventxxx) {
 
             double xx,yy,zz =0;
+
+
+
             gravSensorVals = lowPass(sensorEventxxx.values.clone(), gravSensorVals);
             xx  = sensorEventxxx.values[0];
             yy = sensorEventxxx.values[1];
@@ -953,7 +979,13 @@ public class Exercise_base extends Activity {
 
             if(z > std){
                 zPeakList.add(z);
-                System.out.println("****************************PEAK!  z:"+z+"   differ:" + differ + " ****** EXP_differ2:"+ differ2);
+                System.out.println("****************************PEAK!  z:" + z + "   differ:" + differ + " ****** EXP_differ2:" + differ2);
+                repetitionCount = repetitionCount +1;
+
+                repetitionText.setText(String.valueOf(repetitionCount));
+                setRepetitionNumb(repetitionCount);
+
+
 
 
 
