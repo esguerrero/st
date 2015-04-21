@@ -18,12 +18,12 @@ public class MetricsSQL extends SQLiteOpenHelper {
     public static final String COLUMN_HEIGHT = "height";
     public static final String COLUMN_MAXPOW = "maxpow";
     public static final String COLUMN_AVGPOW = "avgpow";
-    public static final String COLUMN_MAXFORCE = "maxpow";
-    public static final String COLUMN_AVGFORCE = "avgpow";
+    public static final String COLUMN_MAXFORCE = "maxforce";
+    public static final String COLUMN_AVGFORCE = "avgforce";
     public static final String COLUMN_AVGTIME = "avgtime";
     public static final String COLUMN_MAXDIST = "maxdist";
     public static final String COLUMN_AVGDIST = "avgdist";
-
+    public static final String COLUMN_ID_SUBACT = "idsubact";
 
     //private static final String DATABASE_NAME = "measures.db";
     private String DATABASE_NAME = "";
@@ -49,6 +49,7 @@ public class MetricsSQL extends SQLiteOpenHelper {
             + COLUMN_AVGTIME+ " integer "
             + COLUMN_MAXDIST+ " integer "
             + COLUMN_AVGDIST+ " integer "
+            + COLUMN_ID_SUBACT+ " integer "
             +");";
 
 

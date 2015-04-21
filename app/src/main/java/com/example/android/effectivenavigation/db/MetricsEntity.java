@@ -3,7 +3,7 @@ package com.example.android.effectivenavigation.db;
 /**
  * Created by Esteban on 2015-04-21.
  */
-public class Metrics {
+public class MetricsEntity {
 
     private double weight;
     private double height;
@@ -105,7 +105,13 @@ public class Metrics {
         this._id_subactivity = _id_activity;
     }
 
-    public Metrics(int _id) {
+    public MetricsEntity(int _id) {
         this._id = _id;
     }
+
+    public MetricsEntity() {
+    }
 }
+
+
+
