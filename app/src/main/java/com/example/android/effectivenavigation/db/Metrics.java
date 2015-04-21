@@ -14,7 +14,7 @@ public class Metrics {
     private double avgForce;
     private double maxDistance; //accumulated
     private double avgDistance;
-    private long _id, _id_activity;
+    private int _id, _id_subactivity;
 
 
     public double getWeight() {
@@ -93,19 +93,19 @@ public class Metrics {
         return _id;
     }
 
-    public void set_id(long _id) {
+    public void set_id(int _id) {
         this._id = _id;
     }
 
     public long get_id_activity() {
-        return _id_activity;
+        return _id_subactivity;
     }
 
-    public void set_id_activity(long _id_activity) {
-        this._id_activity = _id_activity;
+    public void set_id_activity(int _id_activity) {
+        this._id_subactivity = _id_activity;
     }
 
-    public Metrics(long _id) {
+    public Metrics(int _id) {
         this._id = _id;
     }
 }

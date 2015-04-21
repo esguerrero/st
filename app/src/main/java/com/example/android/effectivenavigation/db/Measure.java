@@ -2,7 +2,7 @@ package com.example.android.effectivenavigation.db;
 
 public class Measure {
 
-	private long id, id_user;
+	private long id, id_user, _id_measures;
 	private double x,y,z,timestamp;
 
     public Measure() {
