@@ -514,8 +514,8 @@ public class Exercise_base extends Activity {
                 int minutes = seconds / 60;
                 seconds = seconds % 60;
 
-                countText.setTextColor(Color.GREEN);
-                countText.setText("Sensing: " + String.format("%d:%02d", minutes, seconds));
+             //   countText.setTextColor(Color.GREEN);
+             //   countText.setText("Sensing: " + String.format("%d:%02d", minutes, seconds));
                 timeText.setText(String.format("%d:%02d", minutes, seconds));
 
                 timerHandler.postDelayed(this, 500);
@@ -955,6 +955,7 @@ public class Exercise_base extends Activity {
 
             double differ = maxxx - std;
             double differ2 = maxxx*0.1;
+
 
 
 
