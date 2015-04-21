@@ -1,0 +1,25 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+
+android:background="@drawable/bga">
+
+    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/webView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/buttonUrl" />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Tillbaka"
+    android:id="@+id/buttonBack"
+    android:background="@drawable/button_customize"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true" />
+
+</RelativeLayout><!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/layout/main.xml -->

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2012 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<resources>
+
+    <string name="app_name">Physical Activity Tracker</string>
+    <string name="dummy_section_text">Section %1d is just a dummy section.</string>
+    <string name="demo_external_activity">Demo External Activity</string>
+    <string name="demo_collection">Demo Collection</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Send</string>
+    <string name="action_saving">Save</string>
+    <string name="title_activity_intro">Allmän information</string>
+    <string name="title_activity_step1">Stå med fötterna tätt ihop</string>
+    <string name="title_activity_step2">Semi-tandemstående</string>
+    <string name="title_activity_step3">Balance</string>
+    <string name="title_activity_step4">Uppresning från stol</string>
+    <string name="title_activity_introduction">IntroductionActivity</string>
+    <string name="title_activity_exercise_base">Exercise Tracker</string>
+    <string name="title_activity_videoasset">VideoActivity</string>
+    <string name="title_activity_video_asset">VideoAssetActivity</string>
+    <string name="title_activity_fullscreen_intro">FullscreenIntro</string>
+    <string name="dummy_button">Tillbaka</string>
+    <string name="dummy_button_step1">Tillbaka</string>
+    <string name="dummy_button_step2">Tillbaka</string>
+    <string name="dummy_button_step3">Tillbaka</string>
+    <string name="dummy_button_step4">Tillbaka</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_content_step1">-</string>
+    <string name="dummy_content_step2">-</string>
+    <string name="dummy_content_step3">-</string>
+    <string name="dummy_content_step4">-</string>
+    <string name="title_activity_fullscreen_step1">Stå med fötterna tätt ihop</string>
+    <string name="title_activity_fullscreen_step2">Semi-tandemstående</string>
+    <string name="title_activity_fullscreen_step3">Tandemstående</string>
+    <string name="title_activity_fullscreen_step4">Uppresning från stol</string>
+    <string name="title_activity_fullscreen_graphic">FullscreenGraphic</string>
+    <string name="title_activity_balance_detect">Chair Stand Test</string>
+    <string name="title_activity_sway_detect">Balance Test</string>
+    <string name="sharing">Share</string>
+    <string name="help">Help</string>
+
+
+</resources>

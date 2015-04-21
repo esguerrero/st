@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/share"
+        android:icon="@drawable/ic_sharing"
+        android:title="@string/sharing"
+        android:showAsAction="ifRoom"/>
+    <item android:id="@+id/help"
+        android:icon="@drawable/ic_sharing"
+        android:title="@string/help" />
+</menu><!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/menu/menu_exercise_base.xml -->

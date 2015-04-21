@@ -1,0 +1,32 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.1.0'
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 14
+    }
+    buildTypes {
+        release {
+            apply plugin: 'project-report'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.+'
+    compile 'com.android.support:support-v4:19.+'
+    compile 'com.android.support:support-v4:19.+'
+    compile 'com.android.support:support-v4:19.+'
+    compile 'com.android.support:support-v4:19.+'
+    compile 'com.android.support:support-v4:19.+'
+    compile files('build/libs/GraphView-4.0.0.jar')
+    compile files('build/libs/dropbox-android-sdk-1.6.3.jar')
+    compile files('build/libs/json_simple-1.1.jar')
+    compile files('build/libs/commons-math3-3.5.jar')
+}

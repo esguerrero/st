@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_checked="false"
+        android:drawable="@drawable/share_icon" />
+    <item
+        android:state_checked="true"
+        android:drawable="@drawable/share_iconb" />
+</selector><!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/drawable/ic_sharing.xml -->

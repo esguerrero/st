@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="black_overlay">#66000000</color>
+    <declare-styleable name="ButtonBarContainerTheme"><attr format="reference" name="metaButtonBarStyle"/><attr format="reference" name="metaButtonBarButtonStyle"/></declare-styleable>
+    <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="texture_view_height">176dp</dimen>
+    <dimen name="texture_view_width">320dp</dimen>
+    <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="action_saving">Save</string>
+    <string name="action_settings">Send</string>
+    <string name="app_name">Physical Activity Tracker</string>
+    <string name="demo_collection">Demo Collection</string>
+    <string name="demo_external_activity">Demo External Activity</string>
+    <string name="dummy_button">Tillbaka</string>
+    <string name="dummy_button_step1">Tillbaka</string>
+    <string name="dummy_button_step2">Tillbaka</string>
+    <string name="dummy_button_step3">Tillbaka</string>
+    <string name="dummy_button_step4">Tillbaka</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_content_step1">-</string>
+    <string name="dummy_content_step2">-</string>
+    <string name="dummy_content_step3">-</string>
+    <string name="dummy_content_step4">-</string>
+    <string name="dummy_section_text">Section %1d is just a dummy section.</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="help">Help</string>
+    <string name="sharing">Share</string>
+    <string name="title_activity_balance_detect">Chair Stand Test</string>
+    <string name="title_activity_exercise_base">Exercise Tracker</string>
+    <string name="title_activity_fullscreen_graphic">FullscreenGraphic</string>
+    <string name="title_activity_fullscreen_intro">FullscreenIntro</string>
+    <string name="title_activity_fullscreen_step1">Stå med fötterna tätt ihop</string>
+    <string name="title_activity_fullscreen_step2">Semi-tandemstående</string>
+    <string name="title_activity_fullscreen_step3">Tandemstående</string>
+    <string name="title_activity_fullscreen_step4">Uppresning från stol</string>
+    <string name="title_activity_intro">Allmän information</string>
+    <string name="title_activity_introduction">IntroductionActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_step1">Stå med fötterna tätt ihop</string>
+    <string name="title_activity_step2">Semi-tandemstående</string>
+    <string name="title_activity_step3">Balance</string>
+    <string name="title_activity_step4">Uppresning från stol</string>
+    <string name="title_activity_sway_detect">Balance Test</string>
+    <string name="title_activity_video_asset">VideoAssetActivity</string>
+    <string name="title_activity_videoasset">VideoActivity</string>
+    <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/styles_balance.xml -->
+    <eat-comment/>
+    <style name="ActionBar.Solid.Balance" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_balance</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_balance</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_balance</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Balance</item>
+    </style>
+    <style name="ActionBar.Transparent.Balance" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_balance</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Balance</item>
+    </style>
+    <style name="ActionBarTabStyle.Balance" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_balance</item>
+    </style>
+    <style name="ActionButton.CloseMode.Balance" parent="@android:style/Widget.Holo.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_balance</item>
+    </style>
+    <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+    <style name="ButtonBarButton"/>
+    <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/styles_balance.xml -->
+    <eat-comment/>
+    <style name="DropDownListView.Balance" parent="@android:style/Widget.Holo.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_balance</item>
+    </style>
+    <style name="DropDownNav.Balance" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_balance</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_balance</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_balance</item>
+    </style>
+    <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">@style/ButtonBar</item>
+        <item name="metaButtonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+    <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/styles_balance.xml -->
+    <eat-comment/>
+    <style name="PopupMenu.Balance" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_balance</item>	
+    </style>
+    <style name="ProgressBar.Balance" parent="@android:style/Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_balance</item>
+    </style>
+    <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="SpinnerDropDownItem">
+        <item name="android:textColor">#993399</item>
+        <item name="android:background">@drawable/my_rectangle</item>
+    </style>
+    <style name="SpinnerItem">
+        <item name="android:textColor">#993399</item>
+        <item name="android:background">@drawable/my_rectangle</item>
+    </style>
+    <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/styles_balance.xml -->
+    <eat-comment/>
+    <style name="Theme.Balance" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_balance</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Balance</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Balance</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Balance</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Balance</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Transparent.Balance</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_balance</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_balance</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Balance</item>
+        
+        
+    </style>
+    <style name="Theme.Balance.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Balance</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Balance</item>
+    </style>
+    <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="Widget.Button.Toggle" parent="android:Widget">
+        <item name="android:background">@drawable/ic_toggle_bg</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+    <style name="toggleButton" parent="@android:Theme.Black">
+    <item name="android:buttonStyleToggle">@style/Widget.Button.Toggle</item>
+    <item name="android:textOn"/>
+    <item name="android:textOff"/>
+    </style>
+</resources>

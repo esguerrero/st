@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <style name="Theme.Balance" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_balance</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Balance</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Balance</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Balance</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Balance</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Transparent.Balance</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_balance</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_balance</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Balance</item>
+        
+        
+    </style>
+
+    <style name="ActionBar.Solid.Balance" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_balance</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_balance</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_balance</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Balance</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Balance" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_balance</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Balance</item>
+    </style>
+
+    <style name="PopupMenu.Balance" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_balance</item>	
+    </style>
+
+    <style name="DropDownListView.Balance" parent="@android:style/Widget.Holo.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_balance</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Balance" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_balance</item>
+    </style>
+
+    <style name="DropDownNav.Balance" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_balance</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_balance</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_balance</item>
+    </style>
+    
+    <style name="ProgressBar.Balance" parent="@android:style/Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_balance</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Balance" parent="@android:style/Widget.Holo.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_balance</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Balance.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Balance</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Balance</item>
+    </style>
+
+</resources>
