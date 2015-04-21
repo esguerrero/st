@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.3\app\build\libs\json_simple-1.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.3\app\build\intermediates\pre-dexed\debug\json_simple-1.1-8be315e49c6b707698ba27288bae07e482c08422.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.0\app\build\libs\GraphView-4.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="20768335ab718b2a912f9155f9d1893d5fc931ce">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.0\app\build\intermediates\pre-dexed\debug\GraphView-4.0.0-a219669003631ba09cfdc1ba00057ddfc6f770d3.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Balance2\Balance9\Balance9.0\Balance9.0\app\build\libs\json_simple-1.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb">
+        <dex dex="D:\Umu\Balance2\Balance9\Balance9.0\Balance9.0\app\build\intermediates\pre-dexed\debug\json_simple-1.1-20db34a2552549bea9b2e660d47735c39f8ab2f1.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.2\app\build\libs\json_simple-1.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.2\app\build\intermediates\pre-dexed\debug\json_simple-1.1-3476b66888235d8dea5f8811a6a83b9c979652b7.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.3\app\build\libs\GraphView-4.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="20768335ab718b2a912f9155f9d1893d5fc931ce">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.3\app\build\intermediates\pre-dexed\debug\GraphView-4.0.0-d324a62eb210a69c974fdc7aeef99795efb542c9.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.2\app\build\libs\commons-math3-3.5.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="13af68e9a11576953f5c4b09436f8207be9d3a27">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.2\app\build\intermediates\pre-dexed\debug\commons-math3-3.5-00742b1cd39ced7821c8c09e9fab613d7952b87c.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.1\app\build\libs\GraphView-4.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="20768335ab718b2a912f9155f9d1893d5fc931ce">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.1\app\build\intermediates\pre-dexed\debug\GraphView-4.0.0-c90c6190bccbabad7c37b5093e1d3401eab3c5a0.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Balance2\Balance9\Balance9.0\Balance9.0\app\build\libs\dropbox-android-sdk-1.6.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="986e7a58e925c6f91b88ae8d3224a0550b65acc7">
+        <dex dex="D:\Umu\Balance2\Balance9\Balance9.0\Balance9.0\app\build\intermediates\pre-dexed\debug\dropbox-android-sdk-1.6.3-03759e3ab80ebd4bc3c934e0a8ef0ce449ab7765.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.3\app\build\libs\dropbox-android-sdk-1.6.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="986e7a58e925c6f91b88ae8d3224a0550b65acc7">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.3\app\build\intermediates\pre-dexed\debug\dropbox-android-sdk-1.6.3-6513fcabdd328815f21c9d575348fe6e075a030f.jar" />
+    </item>
+    <item
+        jar="D:\Users\Esteban\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="D:\Umu\Balance2\Balance9\Balance9.0\Balance9.0\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-f69c8848a9bfa5efda2bb49f3e52348c7a55d45b.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.1\app\build\libs\json_simple-1.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.1\app\build\intermediates\pre-dexed\debug\json_simple-1.1-9823d4e9242948bc12c5842ab61ec78c7434ca12.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.3\app\build\libs\commons-math3-3.5.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="13af68e9a11576953f5c4b09436f8207be9d3a27">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.3\app\build\intermediates\pre-dexed\debug\commons-math3-3.5-cf483e973e3fe30f936a9c43722a5a066cbeddf9.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.1\app\build\libs\dropbox-android-sdk-1.6.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="986e7a58e925c6f91b88ae8d3224a0550b65acc7">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.1\app\build\intermediates\pre-dexed\debug\dropbox-android-sdk-1.6.3-7ffc24470ff01e41bdd9a56b15d56430e00dee56.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.2\app\build\libs\GraphView-4.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="20768335ab718b2a912f9155f9d1893d5fc931ce">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.2\app\build\intermediates\pre-dexed\debug\GraphView-4.0.0-3a698eaec7d777375ed6f9c6cd2bfca4fe4e09cb.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.1\app\build\libs\commons-math3-3.5.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="13af68e9a11576953f5c4b09436f8207be9d3a27">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.1\app\build\intermediates\pre-dexed\debug\commons-math3-3.5-a95455cf8e39e14e0c266b81c4a63e63e9bce441.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.0\app\build\libs\json_simple-1.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.0\app\build\intermediates\pre-dexed\debug\json_simple-1.1-91d2d5939c240ac8a485c59edf4437631fd245c5.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Balance2\Balance9\Balance9.0\Balance9.0\app\build\libs\GraphView-4.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="20768335ab718b2a912f9155f9d1893d5fc931ce">
+        <dex dex="D:\Umu\Balance2\Balance9\Balance9.0\Balance9.0\app\build\intermediates\pre-dexed\debug\GraphView-4.0.0-06ac57a5d14cd75796b61bfc0c8ff2074b660d2b.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.2\app\build\libs\dropbox-android-sdk-1.6.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="986e7a58e925c6f91b88ae8d3224a0550b65acc7">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.2\app\build\intermediates\pre-dexed\debug\dropbox-android-sdk-1.6.3-5244a09615afcaf9de708a807111e7c4c524b055.jar" />
+    </item>
+    <item
+        jar="D:\Umu\Sports\Sources\SportTrack1.0\app\build\libs\dropbox-android-sdk-1.6.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="986e7a58e925c6f91b88ae8d3224a0550b65acc7">
+        <dex dex="D:\Umu\Sports\Sources\SportTrack1.0\app\build\intermediates\pre-dexed\debug\dropbox-android-sdk-1.6.3-cb93d8bdf824cae9320efd8ea9db88aaa0aa981b.jar" />
+    </item>
+
+</items>
