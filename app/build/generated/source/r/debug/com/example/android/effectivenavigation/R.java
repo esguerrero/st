@@ -20,6 +20,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class color {
         public static final int black_overlay=0x7f040000;
+        public static final int white=0x7f040001;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;
@@ -123,25 +124,26 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int vid2=0x7f02005c;
     }
     public static final class id {
-        public static final int action_saving=0x7f090044;
-        public static final int action_sending=0x7f090040;
-        public static final int action_settings=0x7f090041;
-        public static final int artist=0x7f09003c;
+        public static final int action_saving=0x7f09004a;
+        public static final int action_sending=0x7f090046;
+        public static final int action_settings=0x7f090047;
+        public static final int artist=0x7f090042;
         public static final int button=0x7f090004;
         public static final int button2=0x7f090024;
-        public static final int buttonBack=0x7f09003f;
-        public static final int buttonUrl=0x7f09003e;
+        public static final int buttonBack=0x7f090045;
+        public static final int buttonUrl=0x7f090044;
         public static final int buttons2=0x7f09002a;
         public static final int buttons4=0x7f09002e;
-        public static final int demo_collection_button=0x7f090036;
-        public static final int demo_external_activity=0x7f090037;
-        public static final int description=0x7f090031;
+        public static final int demo_collection_button=0x7f090037;
+        public static final int demo_external_activity=0x7f090038;
+        public static final int description=0x7f090032;
         public static final int dummy_button=0x7f090011;
         public static final int dummy_button_step1=0x7f090003;
         public static final int dummy_button_step2=0x7f09001a;
         public static final int dummy_button_step3=0x7f09001e;
         public static final int dummy_button_step4=0x7f090022;
-        public static final int duration=0x7f09003d;
+        public static final int duration=0x7f090043;
+        public static final int fragment=0x7f09002f;
         public static final int fullscreen_content=0x7f090012;
         public static final int fullscreen_content_controls=0x7f090010;
         public static final int fullscreen_content_controls_step1=0x7f090016;
@@ -152,35 +154,40 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int fullscreen_content_step2=0x7f090017;
         public static final int fullscreen_content_step3=0x7f09001b;
         public static final int fullscreen_content_step4=0x7f09001f;
-        public static final int grapht=0x7f090032;
-        public static final int help=0x7f090043;
+        public static final int grapht=0x7f090033;
+        public static final int help=0x7f090049;
         public static final int imageButton=0x7f090027;
         public static final int imageButton2=0x7f090029;
         public static final int imageButton4=0x7f09002d;
-        public static final int img=0x7f09002f;
-        public static final int list_image=0x7f09003a;
+        public static final int img=0x7f090030;
+        public static final int list_image=0x7f090040;
         public static final int listviewperso=0x7f090026;
         public static final int pager=0x7f090005;
         public static final int pager_title_strip=0x7f090006;
-        public static final int share=0x7f090042;
+        public static final int share=0x7f090048;
         public static final int spinner=0x7f09002b;
-        public static final int spinner2=0x7f090033;
+        public static final int spinner2=0x7f090034;
+        public static final int summarygraph=0x7f09003a;
+        public static final int summarygraph2=0x7f09003c;
         public static final int textView=0x7f090002;
-        public static final int textView2=0x7f090038;
-        public static final int textView3=0x7f090034;
-        public static final int textView4=0x7f090035;
+        public static final int textView10=0x7f09003e;
+        public static final int textView11=0x7f09003b;
+        public static final int textView2=0x7f090039;
+        public static final int textView3=0x7f090035;
+        public static final int textView4=0x7f090036;
         public static final int textView5=0x7f09000a;
         public static final int textView6=0x7f09000c;
         public static final int textView7=0x7f09000d;
         public static final int textView8=0x7f09000b;
-        public static final int text_force=0x7f090009;
-        public static final int text_power=0x7f090007;
-        public static final int text_rep=0x7f090008;
+        public static final int textView9=0x7f09003d;
+        public static final int text_force=0x7f090008;
+        public static final int text_power=0x7f090009;
+        public static final int text_rep=0x7f090007;
         public static final int text_time=0x7f09000e;
         public static final int textureView=0x7f090025;
-        public static final int thumbnail=0x7f090039;
-        public static final int title=0x7f09003b;
-        public static final int titre=0x7f090030;
+        public static final int thumbnail=0x7f09003f;
+        public static final int title=0x7f090041;
+        public static final int titre=0x7f090031;
         public static final int toggleButton=0x7f090001;
         public static final int videoView=0x7f090023;
         public static final int videoView_step1=0x7f090015;
@@ -211,18 +218,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int activity_step2=0x7f03000e;
         public static final int activity_step3=0x7f03000f;
         public static final int activity_step4=0x7f030010;
-        public static final int activity_sway_detect=0x7f030011;
-        public static final int affichageitem=0x7f030012;
-        public static final int fragment_collection_object=0x7f030013;
-        public static final int fragment_protocols=0x7f030014;
-        public static final int fragment_section_dummy=0x7f030015;
-        public static final int fragment_section_history=0x7f030016;
-        public static final int fragment_section_launchpad=0x7f030017;
-        public static final int fragment_section_user=0x7f030018;
-        public static final int fragment_subsection_intro=0x7f030019;
-        public static final int list_row=0x7f03001a;
-        public static final int main=0x7f03001b;
-        public static final int spinner_dropdown_item=0x7f03001c;
+        public static final int activity_summary=0x7f030011;
+        public static final int activity_sway_detect=0x7f030012;
+        public static final int affichageitem=0x7f030013;
+        public static final int fragment_collection_object=0x7f030014;
+        public static final int fragment_protocols=0x7f030015;
+        public static final int fragment_section_dummy=0x7f030016;
+        public static final int fragment_section_history=0x7f030017;
+        public static final int fragment_section_launchpad=0x7f030018;
+        public static final int fragment_section_user=0x7f030019;
+        public static final int fragment_subsection_intro=0x7f03001a;
+        public static final int fragment_summary=0x7f03001b;
+        public static final int list_row=0x7f03001c;
+        public static final int main=0x7f03001d;
+        public static final int spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int intro=0x7f080000;
@@ -230,12 +239,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int main=0x7f080002;
         public static final int menu_balance_detect=0x7f080003;
         public static final int menu_exercise_base=0x7f080004;
-        public static final int menu_sway_detect=0x7f080005;
-        public static final int step1=0x7f080006;
-        public static final int step2=0x7f080007;
-        public static final int step3=0x7f080008;
-        public static final int step4=0x7f080009;
-        public static final int video_asset=0x7f08000a;
+        public static final int menu_summary=0x7f080005;
+        public static final int menu_sway_detect=0x7f080006;
+        public static final int step1=0x7f080007;
+        public static final int step2=0x7f080008;
+        public static final int step3=0x7f080009;
+        public static final int step4=0x7f08000a;
+        public static final int video_asset=0x7f08000b;
     }
     public static final class string {
         public static final int action_saving=0x7f060000;
@@ -272,9 +282,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int title_activity_step2=0x7f06001f;
         public static final int title_activity_step3=0x7f060020;
         public static final int title_activity_step4=0x7f060021;
-        public static final int title_activity_sway_detect=0x7f060022;
-        public static final int title_activity_video_asset=0x7f060023;
-        public static final int title_activity_videoasset=0x7f060024;
+        public static final int title_activity_summary=0x7f060022;
+        public static final int title_activity_sway_detect=0x7f060023;
+        public static final int title_activity_video_asset=0x7f060024;
+        public static final int title_activity_videoasset=0x7f060025;
     }
     public static final class style {
         public static final int ActionBar_Solid_Balance=0x7f070000;

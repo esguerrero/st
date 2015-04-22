@@ -53,6 +53,7 @@
     <string name="title_activity_sway_detect">Balance Test</string>
     <string name="sharing">Share</string>
     <string name="help">Help</string>
+    <string name="title_activity_summary">Summary of the Activity</string>
 
 
 </resources>

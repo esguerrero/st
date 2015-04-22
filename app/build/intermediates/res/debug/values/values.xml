@@ -3,6 +3,7 @@
     <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="black_overlay">#66000000</color>
+    <color name="white">#ffffff</color>
     <declare-styleable name="ButtonBarContainerTheme"><attr format="reference" name="metaButtonBarStyle"/><attr format="reference" name="metaButtonBarButtonStyle"/></declare-styleable>
     <!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
@@ -46,6 +47,7 @@
     <string name="title_activity_step2">Semi-tandemstående</string>
     <string name="title_activity_step3">Balance</string>
     <string name="title_activity_step4">Uppresning från stol</string>
+    <string name="title_activity_summary">Summary of the Activity</string>
     <string name="title_activity_sway_detect">Balance Test</string>
     <string name="title_activity_video_asset">VideoAssetActivity</string>
     <string name="title_activity_videoasset">VideoActivity</string>

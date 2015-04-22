@@ -123,6 +123,10 @@
             android:name="com.example.android.effectivenavigation.ui.SwayDetect"
             android:label="@string/title_activity_sway_detect" >
         </activity>
+        <activity
+            android:name="com.example.android.effectivenavigation.ui.SummaryActivity"
+            android:label="@string/title_activity_summary" >
+        </activity>
     </application>
 
 </manifest>

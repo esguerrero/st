@@ -448,7 +448,11 @@ public class Exercise_base extends Activity {
 
                             public void onFinish() {
                                 StartMeasures();
-                                countText.setText("0:00");
+                                countText.setTextColor(Color.RED);
+                                countText.setText("GO!");
+
+                                countText.setText("");
+
                                 vibe.vibrate(30); // 50 is time in ms
 
                                 try {
@@ -575,7 +579,7 @@ public class Exercise_base extends Activity {
         public  void StopMeasures(){
             mSensorManagerxx.unregisterListener(this);
 
-            System.err.println("\t \t(OK) TOTAL CAPTURED:"+measuresList.size() );
+            System.err.println("\t \t(OK) TOTAL CAPTURED:" + measuresList.size());
 
 
             try{
@@ -587,10 +591,13 @@ public class Exercise_base extends Activity {
                 //StartVideoAfterbeep();
 
                 SaveDialog();
+
+
+
+
             }catch (IOException ex){
                 System.err.println("********************  exception playing the beep or starting final video:"+ex.getLocalizedMessage());
             }
-
         }
 
 
@@ -675,7 +682,8 @@ public class Exercise_base extends Activity {
                         public void onClick(DialogInterface dialogInterface, int i) {
                             System.out.println("\t(OK) NIE (back)---->user:" + user);
                             //  countText.setTextColor(Color.BLACK);
-                            countText.setText("5:00");
+                            //countText.setText("5:00");
+
 
                             // QuestionDialog();
                             //videoAfterMeas.setAlpha(0.0f);
@@ -687,6 +695,8 @@ public class Exercise_base extends Activity {
                     });
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
+
+
 
         }
 
@@ -752,6 +762,11 @@ public class Exercise_base extends Activity {
 
             protected void onPostExecute(final Boolean result) {
                 mDialog.dismiss();
+
+                Intent intent = new Intent(context, SummaryActivity.class);
+                startActivity(intent);
+
+
                 /*if (this.dialog.isShowing()) {
                     this.dialog.dismiss();
                 }
@@ -1022,6 +1037,9 @@ public class Exercise_base extends Activity {
                     System.err.println("******************** STOPPING MEASUREMENTS >");
                     StopMeasures();
                     mDialog.dismiss();
+
+
+
                 }catch (Exception e){
                     System.err.println("\t (OK)(ERROR TRYING TO STOP MEASUREMENTS):"+e.getLocalizedMessage());
                 }
