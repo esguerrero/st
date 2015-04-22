@@ -25,6 +25,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.DataPointInterface;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.series.OnDataPointTapListener;
+import com.jjoe64.graphview.series.PointsGraphSeries;
 import com.jjoe64.graphview.series.Series;
 
 import java.util.List;
@@ -72,13 +73,14 @@ public class HistoricSectionFragment extends android.support.v4.app.Fragment imp
     private Runnable mTimer2;
     private LineGraphSeries<DataPoint> mSeries0;
     private LineGraphSeries<DataPoint> mSeries1;
-    private LineGraphSeries<DataPoint> mSeries2;
+    private PointsGraphSeries<DataPoint> mSeries2;
+
+
 
     private double graph2LastXValue = 5d;
 
     private GraphView summarygraph;
     private GraphView summarygraph2;
-
 
 
     public SummaryActivityFragment() {
@@ -104,7 +106,6 @@ public class HistoricSectionFragment extends android.support.v4.app.Fragment imp
         toast.show();
 
 
-
         summarygraph = (GraphView) rootView.findViewById(R.id.summarygraph);
         summarygraph2 = (GraphView) rootView.findViewById(R.id.summarygraph2);
 
@@ -116,8 +117,13 @@ public class HistoricSectionFragment extends android.support.v4.app.Fragment imp
         mSeries0 = new LineGraphSeries<DataPoint>(new DataPoint[]{
                 new DataPoint(0, 0)
         });
+
+        mSeries2 = new PointsGraphSeries<DataPoint>(new DataPoint[]{
+                new DataPoint(0, 0)
+        });
+
         summarygraph.addSeries(mSeries0);
-        summarygraph2.addSeries(mSeries0);
+        summarygraph2.addSeries(mSeries2);
 
         drawSummaryGraph();
 
@@ -125,39 +131,54 @@ public class HistoricSectionFragment extends android.support.v4.app.Fragment imp
 
     }
 
-    private DataPoint[] generateData() {
+    /**
+     * Returns data form Measures table of DB
+     *
+     * @param typeofGraph
+     * @return
+     */
+    private DataPoint[] generateData(int typeofGraph) {
         DataPoint[] values;
 
         long lid = 0;
         long mid = 0;
 
         int sizeList = 0;
-
-
         measuresDataSource = new MeasuresDataSource(contxt, databaseName);
         measuresDataSource.open();
 
-        /* TODO SE NECESITA CAMBIAR EL DATASOURCE PARA OBTENER METRICAS  */
         List<Measure> measuresListSizeId = measuresDataSource.getMeasuresbyId(0);
 
         sizeList = measuresListSizeId.size();
 
         if (sizeList > 1) {
             DataPoint v = new DataPoint(0, 0);
-            System.out.println("SIZE FULL::" + sizeList + "SIZE-id:" + measuresListSizeId.size());
-
             Random mRand = new Random();
             int count = sizeList;
             values = new DataPoint[count];
+            if (typeofGraph == 0) {
 
-            for (int j = 0; j < count; j++) {
-                v = new DataPoint(measuresListSizeId.get(j).getTimestamp(), measuresListSizeId.get(j).getZ());
-                values[j] = v;
+                /**
+                 * Z T series
+                 */
+                for (int j = 0; j < count; j++) {
+                    v = new DataPoint(measuresListSizeId.get(j).getTimestamp(), measuresListSizeId.get(j).getZ());
+                    values[j] = v;
+                }
+            } else if (typeofGraph == 1) {
+                /**
+                 *  X Y series
+                 */
+                for (int j = 0; j < count; j++) {
+                    v = new DataPoint(measuresListSizeId.get(j).getX(), measuresListSizeId.get(j).getY());
+                    values[j] = v;
+                }
             }
-        } else {
+        } else
+
+        {
             int count = 1;
             values = new DataPoint[count];
-
             for (int i = 0; i < count; i++) {
                 DataPoint v = new DataPoint(0, 0);
                 values[i] = v;
@@ -175,30 +196,34 @@ public class HistoricSectionFragment extends android.support.v4.app.Fragment imp
         summarygraph.removeAllSeries();
         summarygraph2.removeAllSeries();
 
-        DataPoint[] newData = generateData();
+        DataPoint[] newDataXY = generateData(1);
+        DataPoint[] newDataZT = generateData(0);
 
-        LineGraphSeries<DataPoint> mSeriesNew = new LineGraphSeries<DataPoint>(newData);
+        LineGraphSeries<DataPoint> mSeriesNewZT = new LineGraphSeries<DataPoint>(newDataZT);
+        PointsGraphSeries<DataPoint> mSeriesNewXY = new PointsGraphSeries<DataPoint>(newDataXY);
+        //LineGraphSeries<DataPoint> mSeriesNewXY = new LineGraphSeries<DataPoint>(newDataXY);s
 
         summarygraph.removeSeries(mSeries1);
-        summarygraph.removeSeries(mSeriesNew);
-        summarygraph.addSeries(mSeriesNew);
+        summarygraph.removeSeries(mSeriesNewZT);
+        summarygraph.addSeries(mSeriesNewZT);
 
 
-        mSeriesNew.setTitle("Acceleration vs. Time");
-        mSeriesNew.setColor(Color.GREEN);
-        mSeriesNew.setDrawDataPoints(true);
-        mSeriesNew.setDataPointsRadius(6);
+        mSeriesNewZT.setTitle("Acceleration vs. Time");
+        mSeriesNewZT.setColor(Color.GREEN);
+        mSeriesNewZT.setDrawDataPoints(true);
+        mSeriesNewZT.setDataPointsRadius(6);
 
-        mSeriesNew.setOnDataPointTapListener(new OnDataPointTapListener() {
+        mSeriesNewZT.setOnDataPointTapListener(new OnDataPointTapListener() {
             @Override
             public void onTap(Series series, DataPointInterface dataPoint) {
                 Toast.makeText(getActivity(), "Data Point: " + dataPoint, Toast.LENGTH_SHORT).show();
             }
         });
 
-        summarygraph2.removeSeries(mSeries1);
-        summarygraph2.removeSeries(mSeriesNew);
-        summarygraph2.addSeries(mSeriesNew);
+        mSeriesNewXY.setSize(4);
+        summarygraph2.removeSeries(mSeries2);
+        summarygraph2.removeSeries(mSeriesNewXY);
+        summarygraph2.addSeries(mSeriesNewXY);
 
 
     }

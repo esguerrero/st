@@ -25,7 +25,8 @@
         android:layout_marginTop="22dp"
         android:layout_below="@+id/summarygraph"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/h1" />
 
 
 
@@ -56,6 +57,31 @@
         android:layout_below="@+id/textView10"
         android:text="Max. Power:"
         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textmaxacc"
+        android:layout_above="@+id/textView10"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_marginLeft="29dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/texttotaltime"
+        android:layout_alignBottom="@+id/textView10"
+        android:layout_alignLeft="@+id/textmaxacc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textmaxpow"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_alignLeft="@+id/texttotaltime" />
 
 
 </RelativeLayout>
