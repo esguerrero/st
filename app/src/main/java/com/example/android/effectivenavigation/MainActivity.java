@@ -303,7 +303,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             map = new HashMap<String, String>();
             map.put("titre", "Snatch");
             map.put("description", "The objective of the snatch is to lift the barbell from the ground to overhead in one continuous motion.");
-            map.put("img", String.valueOf(R.drawable.lift2b));
+            map.put("img", String.valueOf(R.drawable.lift1b));
             listItem.add(map);
 
             map = new HashMap<String, String>();
@@ -322,7 +322,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             map = new HashMap<String, String>();
             map.put("titre", "Lifting 2");
             map.put("description", "Description of the exercise");
-            map.put("img", String.valueOf(R.drawable.lift1b));
+            map.put("img", String.valueOf(R.drawable.lift2b));
             listItem.add(map);
 
 

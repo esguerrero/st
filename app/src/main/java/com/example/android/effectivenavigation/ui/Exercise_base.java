@@ -32,7 +32,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -107,7 +106,6 @@ public class Exercise_base extends Activity {
     int count=0;
 
 
-    private Button butiBack, buttRepeat, saveButton;
 //    private ImageButton butstart;
 
 
@@ -236,7 +234,6 @@ public class Exercise_base extends Activity {
         togglebut = (ToggleButton)findViewById(R.id.toggleButton);
 
 
-        saveButton = (Button)findViewById(R.id.button);
 
         runSensor= new RunningSensor();
 
@@ -263,11 +260,8 @@ public class Exercise_base extends Activity {
 
         setUser();
 
-        listenerSaveButton();
 
-        System.out.println("XX");
 
-        addListenerOnButton();
 
     }
 
@@ -293,24 +287,19 @@ public class Exercise_base extends Activity {
 
     }
 
-
-
-    public void addListenerOnButton() {
-
-        butiBack = (Button) findViewById(R.id.dummy_button_step1);
-
-        butiBack.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-
-                finish();
-
-            }
-
-        });
+    /**
+     * Sets a number of temp
+     */
+    public void setLastDataTemp(int maxAcc, int totalTime, int maxPow){
+        editor.putInt("maxacc", maxAcc);
+        editor.putInt("totaltime", totalTime);
+        editor.putInt("maxpow", maxPow);
+        editor.commit(); // commit changes
 
     }
+
+
+
 
 
 
@@ -343,20 +332,6 @@ public class Exercise_base extends Activity {
     private void delayedHide(int delayMillis) {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
-    }
-
-    public void listenerSaveButton(){
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ExportDatabaseCSVTask exportdb = new ExportDatabaseCSVTask();
-                exportdb.execute();
-
-                Toast.makeText(context, "Saving DB into a TXT file", Toast.LENGTH_SHORT)
-                        .show();
-            }
-        });
-
     }
 
 
@@ -479,6 +454,23 @@ public class Exercise_base extends Activity {
                         timerHandler.removeCallbacks(timerRunnable);
                         System.out.println("OFF");
                         StopMeasures();
+
+
+                        /* Sets a number of temp
+
+                        public void setLastDataTemp(int maxAcc, int totalTime, int maxPow){
+                            editor.putInt("maxacc", maxAcc);
+                            editor.putInt("totaltime", totalTime);
+                            editor.putInt("maxpow", maxPow);
+                            editor.commit(); // commit changes
+
+                            */
+                            //double maxacc = Collections.max(zList);
+
+                            //int maxaccint = Integer.getInteger(String.valueOf(maxacc));
+
+
+                            //setLastDataTemp(maxaccint,);
 
                         countText.setText("5:00");
                         // tiempo.cancel();

@@ -2,6 +2,7 @@ package com.example.android.effectivenavigation.ui;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -31,6 +32,8 @@ import com.jjoe64.graphview.series.Series;
 import java.util.List;
 import java.util.Random;
 
+
+
 /**
  * A placeholder fragment containing a simple view.
  */
@@ -53,6 +56,11 @@ public class SummaryActivityFragment extends Fragment {
 public class HistoricSectionFragment extends android.support.v4.app.Fragment implements AdapterView.OnItemSelectedListener{
 
     */
+static SharedPreferences pref;// = .getSharedPreferences("MyPref", 0); // 0 - for private mode
+
+    static SharedPreferences.Editor editor;// = pref.edit();
+
+
 
     String dato = "";
     private UsersDataSource datasource;
@@ -67,6 +75,7 @@ public class HistoricSectionFragment extends android.support.v4.app.Fragment imp
     private GraphView graphView;
     private LinearLayout layoutx;
 
+    private TextView textmaxacc, textotaltime, textmaxpow;
 
     private final Handler mHandler = new Handler();
     private Runnable mTimer1;
@@ -75,6 +84,7 @@ public class HistoricSectionFragment extends android.support.v4.app.Fragment imp
     private LineGraphSeries<DataPoint> mSeries1;
     private PointsGraphSeries<DataPoint> mSeries2;
 
+    private int maxacc, maxpow, totaltime;
 
 
     private double graph2LastXValue = 5d;
@@ -126,6 +136,28 @@ public class HistoricSectionFragment extends android.support.v4.app.Fragment imp
         summarygraph2.addSeries(mSeries2);
 
         drawSummaryGraph();
+
+
+        textmaxacc = (TextView)rootView.findViewById(R.id.textmaxacc);
+        textotaltime = (TextView)rootView.findViewById(R.id.texttotaltime);
+        textmaxpow = (TextView)rootView.findViewById(R.id.textmaxpow);
+
+        pref = contxt.getSharedPreferences("MyPref", 0); // 0 - for private mode
+        editor = pref.edit();
+
+
+        maxacc = pref.getInt("maxacc",1 );
+        totaltime = pref.getInt("totaltime", 0);
+        maxpow = pref.getInt("maxpow", 0);
+
+        System.err.println("\t (-----------------> "+pref.getString("userN", null));
+
+
+        textmaxacc.setText(String.valueOf(maxacc));
+        textotaltime.setText(String.valueOf(totaltime));
+        textmaxpow.setText(String.valueOf(maxpow));
+
+
 
         return rootView;
 

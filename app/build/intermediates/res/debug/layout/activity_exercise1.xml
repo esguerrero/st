@@ -23,9 +23,9 @@
 
         style="@style/toggleButton"
         android:background="@drawable/ic_toggle_bg"
-        android:layout_marginBottom="56dp"
-        android:layout_above="@+id/button"
-        android:layout_toRightOf="@+id/dummy_button_step1" />
+        android:layout_marginBottom="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,22 +36,6 @@
         android:id="@+id/textView"
         android:layout_above="@+id/toggleButton"
         android:layout_centerHorizontal="true" />
-
-    <Button android:id="@+id/dummy_button_step1"
-        android:layout_width="90dp"
-        android:layout_height="40dp"
-        android:text="@string/dummy_button_step1"
-        android:layout_gravity="right|bottom"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true" />
 
     <TextView
         android:layout_width="wrap_content"

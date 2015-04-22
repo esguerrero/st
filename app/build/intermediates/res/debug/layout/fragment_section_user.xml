@@ -5,13 +5,61 @@
     android:background="@drawable/bg">
 
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/barbellsquat"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="61dp"
+        android:layout_marginTop="279dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Statistics"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="1. Grab the bar with a medium grip. Put your feet directly under the bar, get under it and put it between your traps and rear shoulder muscles (“low bar”)."
         android:id="@+id/textView2"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp" />
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_marginTop="23dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="2. Unrack the bar by Squatting up. Take one step back with one leg, one with your other leg."
+        android:id="@+id/textView12"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="3. Take a big breath, hold it and Squat. Do this by pushing your knees to the side and your hips back and down."
+        android:id="@+id/textView13"
+        android:layout_below="@+id/textView12"
+        android:layout_alignLeft="@+id/textView12" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="4. Hold your breath at the bottom. Don’t stop but quickly reverse the movement by driving your hips straight up."
+        android:id="@+id/textView14"
+        android:layout_below="@+id/textView13"
+        android:layout_alignLeft="@+id/textView13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="5. Hold your breath at the bottom. Don’t stop but quickly reverse the movement by driving your hips straight up."
+        android:id="@+id/textView15"
+        android:layout_below="@+id/textView14"
+        android:layout_alignLeft="@+id/textView14" />
+
 </RelativeLayout><!-- From: file:/D:/Umu/Sports/Sources/SportTrack1.3/app/src/main/res/layout/fragment_section_user.xml -->
