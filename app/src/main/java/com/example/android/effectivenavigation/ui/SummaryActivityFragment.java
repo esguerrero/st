@@ -53,7 +53,7 @@ public class SummaryActivityFragment extends Fragment {
 }
 
 
-public class HistoricSectionFragment extends android.support.v4.app.Fragment implements AdapterView.OnItemSelectedListener{
+public class CoachAdviceSectionFragment extends android.support.v4.app.Fragment implements AdapterView.OnItemSelectedListener{
 
     */
 static SharedPreferences pref;// = .getSharedPreferences("MyPref", 0); // 0 - for private mode
@@ -110,10 +110,7 @@ static SharedPreferences pref;// = .getSharedPreferences("MyPref", 0); // 0 - fo
         contxt = rootView.getContext();
 
 
-        CharSequence text = "Select the user!";
-        int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(contxt, text, duration);
-        toast.show();
+
 
 
         summarygraph = (GraphView) rootView.findViewById(R.id.summarygraph);

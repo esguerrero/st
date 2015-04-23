@@ -5,16 +5,12 @@
     android:background="@drawable/bg">
 
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/barbellsquat"
+    <VideoView
+        android:id="@+id/videoViewSquat"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="61dp"
-        android:layout_marginTop="279dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentLeft="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +19,6 @@
         android:text="1. Grab the bar with a medium grip. Put your feet directly under the bar, get under it and put it between your traps and rear shoulder muscles (“low bar”)."
         android:id="@+id/textView2"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/imageView"
         android:layout_marginTop="23dp" />
 
     <TextView

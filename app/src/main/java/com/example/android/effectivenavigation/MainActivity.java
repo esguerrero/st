@@ -21,9 +21,9 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.AssetManager;
-import android.content.res.Resources;
 import android.graphics.Color;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -41,10 +41,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.MediaController;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 
 //import com.jjoe64.graphview.BarGraphView;
@@ -54,7 +56,6 @@ import com.example.android.effectivenavigation.db.Measure;
 import com.example.android.effectivenavigation.db.User;
 import com.example.android.effectivenavigation.ui.CollectionDemoActivity;
 import com.example.android.effectivenavigation.ui.Exercise_base;
-import com.example.android.effectivenavigation.ui.Step3Activity;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.DataPointInterface;
@@ -82,7 +83,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Properties;
 import java.util.Random;
 import java.util.StringTokenizer;
 
@@ -216,13 +216,13 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                     args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, i + 1);
                     fragmentx.setArguments(argsx);
                     */
-                return new HistoricSectionFragment();
+                return new CoachAdviceSectionFragment();
 
 
                 case 2:
-                return new UserPadSectionFragment();
+                return new StatisticsSectionFragment();
 
-//                    return new HistoricSectionFragment();
+//                    return new CoachAdviceSectionFragment();
                 default:
                     // The other sections of the app are dummy placeholders.
                     Fragment fragment = new DummySectionFragment();
@@ -301,8 +301,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             //On refait la manip plusieurs fois avec des données différentes pour former les items de notre ListView
 
             map = new HashMap<String, String>();
-            map.put("titre", "Snatch");
-            map.put("description", "The objective of the snatch is to lift the barbell from the ground to overhead in one continuous motion.");
+            map.put("titre", "Squats");
+            map.put("description", "The objective of the squats is to lift the barbell from the ground to overhead in one continuous motion.");
             map.put("img", String.valueOf(R.drawable.lift1b));
             listItem.add(map);
 
@@ -430,17 +430,19 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     /**************************************************************************************
      * THis is the fragment showing User content (first tab section)
      */
-    public static class UserPadSectionFragment extends Fragment implements AdapterView.OnItemSelectedListener{
+    public static class StatisticsSectionFragment extends Fragment{
 
+        String uricntdwn= "android.resource://com.example.android.effectivenavigation/"+R.drawable.squatb;
 
         Spinner spinner1, spinner2;
         String dato="";
         private UsersDataSource datasource;
         private ArrayAdapter<String> adapter_state;
         private Context contxt;
-
+        private VideoView videointro;
+        private int position = 0;
         private String ipconf ="";
-
+      //  private ProgressDialog progressDialog;
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -454,46 +456,47 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 //            odaberiRazinu.setDisplayedValues( new String[] { "FirstAnswer", "SecondAnswer", "ThirdAnswer", "FourthAnswer"} );
             contxt = rootView.getContext();
 
-            CharSequence text = "Select the user!";
             int duration = Toast.LENGTH_SHORT;
 
-
-
-            Toast toast = Toast.makeText(contxt, text, duration);
-            toast.show();
-
-            setIpconf(ReadProps("ip.wireless"));
-
-
-            //List<String> userx = GetUsersList();
-
-               //     spinner1 = (Spinner)rootView.findViewById(R.id.spinner);
-
-
-
-
-
-       //     adapter_state = new ArrayAdapter<String>(contxt,R.layout.spinner_dropdown_item,list);
-
-        //    spinner1.setAdapter(adapter_state);
-
-
-        //    spinner1.setOnItemSelectedListener(this);
-
-
-
-
-
-                    //setOnItemClickListener(new View.OnClickListene );  setOnClickListener(new View.OnClickListener() {
+            videointro = (VideoView)rootView.findViewById(R.id.videoViewSquat);
 
 /*
+            progressDialog = new ProgressDialog(contxt);
+            progressDialog.setTitle("JavaCodeGeeks Android Video View Example");
+            progressDialog.setMessage("Loading...");
+            progressDialog.setCancelable(false);
+            progressDialog.show();
+*/
+            videointro.setVideoURI(Uri.parse(uricntdwn));
+            videointro.setMediaController(new MediaController(contxt));
+//            videointro.start();
+
+/*
+            videointro.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), FullscreenStep4.class);
-                    startActivity(intent);
+                public void onPrepared(MediaPlayer mp) {
+
+                    videointro.seekTo(position);
+
+
                 }
             });
-*/
+
+
+            videointro.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    System.out.println("ja");
+                    videointro.start();
+
+                }
+            });
+
+  */
+
+
+
 
             return rootView;
 
@@ -502,209 +505,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 
 
-        public void SetSpinnerData(){
-/*
-            adapter_state = new ArrayAdapter<String>(contxt,android.R.layout.simple_spinner_item,state);
 
-            spinner1.setAdapter(adapter_state);
-*/
-        }
-
-        @Override
-        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-
-            Intent intent = new Intent(getActivity(), Step3Activity.class);
-
-            //System.out.println("selected:"+adapterView.getItemAtPosition(i).toString());
-            spinner1.setSelection(i);
-            String selectedItem = (String)spinner1.getSelectedItem();
-
-            startActivity(intent);
-
-            editor.putString("userH", selectedItem); // Storing string
-            editor.putString("ac1","NO");
-            editor.putString("ac2","NO");
-            editor.putString("ac3","NO");
-            editor.putString("ac4","NO");
-            editor.putString("ac5","NO");
-            editor.putString("ac","0");
-
-
-            editor.commit(); // commit changes
-
-            System.err.println("\t (OK) ---> "+pref.getString("user", null));
-
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> adapterView) {
-
-        }
-
-        public String getDato() {
-            return dato;
-        }
-
-        public void setDato(String dato) {
-            this.dato = dato;
-        }
-
-
-
-        /*********************************************************************************************/
-
-        protected String getASCIIContentFromEntity(HttpEntity entity)
-                throws IllegalStateException, IOException {
-            InputStream in = entity.getContent();
-            StringBuffer out = new StringBuffer();
-            int n = 1;
-            while (n > 0) {
-                byte[] b = new byte[4096];
-                n = in.read(b);
-                if (n > 0)
-                    out.append(new String(b, 0, n));
-            }
-            return out.toString();
-        }
-
-
-        public List<String>  GetUsersList() {//TODO here use the GET method for retreive list of users
-            HttpClient httpClient = new DefaultHttpClient();
-            HttpContext localContext = new BasicHttpContext();
-            List<String> uslist = new ArrayList<String>();
-
-
-            // httpPost.setHeader("Accept", "text/plain");
-            // httpPost.setHeader("Content-type",
-            // "application/x-www-form-urlencoded");
-
-//			HttpPost httpPost = new HttpPost("http://130.239.41.93:8080/Balance3.2/resources/balance/userdata");
-
-//            HttpPut httpPost = new HttpPut(
-//                    "http://130.239.41.93:8080/Balance3.2/resources/balance/userdata");
-
-            ///HttpPut httpPost = new HttpPut("http://"+getIpconf()+":8080/Balance3.2/resources/balance/userdata");
-            HttpPut httpPost = new HttpPut("http://"+getIpconf()+":8080/Balance4.0/resources/balance/userdata");
-
-            //System.out.println("___>>>>>>>>>>>>>>>>"+"http://"+getIpconf()+":8080/Balance3.2/resources/balance/userdata");
-            System.out.println("___>>>>>>>>>>>>>>>>"+"http://"+getIpconf()+":8080/Balance4.0/resources/balance/userdata");
-
-//            HttpPut httpPost = new HttpPut("http://"+getIpconf()+":8080/Balance3.2/resources/balance/ping");
-
-
-
-
-
-//            HttpGet httpGet = new HttpGet("http://130.239.41.93:8080/Balance3.2/resources/balance/users");
-
-
-            try {
-                // Add your data
-                List<NameValuePair> pairs = new ArrayList<NameValuePair>();
-
-                //pairs.add(new BasicNameValuePair(pairsX.get(pairsX.size()-1).getName(),pairsX.get(0).getValue()));
-
-
-                long timestamp = System.currentTimeMillis();
-
-
-                //TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
-                java.util.Date timest  = new java.util.Date((long) timestamp * 1000);
-
-                String timstart = String.valueOf(timest);
-
-                long nanoTime = System.nanoTime();
-                System.out.println("nanotime:"+nanoTime);
-                System.out.println("timestamp:"+timstart);
-                System.out.println("Systimestmp:"+timestamp);
-
-                pairs.add(new BasicNameValuePair("key1",""));
-                pairs.add(new BasicNameValuePair("key2",""));
-                pairs.add(new BasicNameValuePair("key3",""));
-                pairs.add(new BasicNameValuePair("key4","userID"));//TODO SEND THE USER ID
-                //pairs.add(new BasicNameValuePair("key5",String.valueOf(timestamp)));
-                pairs.add(new BasicNameValuePair("key5",""));
-                pairs.add(new BasicNameValuePair("key6","m1"));
-
-
-
-
-                //httpPost.setEntity(new UrlEncodedFormEntity(pairs));
-
-                httpPost.setEntity(new UrlEncodedFormEntity(pairs));
-
-
-
-				/* funciona */
-                // httpPost.setEntity(new StringEntity(obj.toString(),
-                // "UTF-8"));
-				/* funciona */
-            } catch (UnsupportedEncodingException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-            // HttpGet httpGet = new
-            // HttpGet("http://130.239.41.93:8080/AAL2v1.0/resources/greeting/create2");
-            String text = null;
-            try {
-                // HttpResponse response = httpClient.execute(httpGet,
-                // localContext);
-                HttpResponse response = httpClient.execute(httpPost,
-                        localContext);
-                HttpEntity entity = response.getEntity();
-                text = getASCIIContentFromEntity(entity);
-
-                System.out.println("--> * * * * ->Response:" + text);
-
-
-
-                StringTokenizer st2 = new StringTokenizer(text, ",");
-                List<User> uList = new ArrayList<User>();
-
-
-
-                while (st2.hasMoreElements()) {
-
-                    uslist.add((String)st2.nextElement());
-                }
-
-
-            } catch (Exception e) {
-                System.out.println("EROR:" + e.getLocalizedMessage());
-            }
-            return uslist;
-        }
-
-
-
-
-        public String ReadProps(String key){
-            Resources resources = this.getResources();
-            AssetManager assetManager = resources.getAssets();
-            String prop = "";
-// Read from the /assets directory
-            try {
-                InputStream inputStream = assetManager.open("config.properties");
-                Properties properties = new Properties();
-                properties.load(inputStream);
-                System.out.println("The properties are now loaded");
-                prop = properties.getProperty(key);
-                return prop;
-            } catch (IOException e) {
-                System.err.println("Failed to open microlog property file");
-                e.printStackTrace();
-            }
-            return prop;
-        }
-
-        public String getIpconf() {
-            return ipconf;
-        }
-
-    public void setIpconf(String ipconf) {
-        this.ipconf = ipconf;
-    }
 
 
 }
@@ -714,7 +515,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     /**************************************************************************************
      * THis is the fragment showing User content (first tab section)
      */
-    public static class HistoricSectionFragment extends Fragment implements AdapterView.OnItemSelectedListener{
+    public static class CoachAdviceSectionFragment extends Fragment implements AdapterView.OnItemSelectedListener{
 
 
 
@@ -745,7 +546,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
         private GraphView graph;
 
-        private TextView textTime;
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -760,107 +560,23 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             contxt = rootView.getContext();
 
 
-            CharSequence text = "Select the user!";
-            int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(contxt, text, duration);
-            toast.show();
 
 //            LinearLayout layout = (LinearLayout)rootView.findViewById(R.id.graph1);
             usersList = new ArrayList<User>();
 
             spinner2 = (Spinner) rootView.findViewById(R.id.spinner2);
             List<String> list = new ArrayList<String>();
-            list.add("Choose...");
-            list.add("Individual 1A");
-            list.add("Individual 1B");
-            list.add("Individual 1C");
-            list.add("Individual 2A");
-            list.add("Individual 2B");
-            list.add("Individual 2C");
-            list.add("Individual 3A");
-            list.add("Individual 3B");
-            list.add("Individual 3C");
-            list.add("Individual 4A");
-            list.add("Individual 4B");
-            list.add("Individual 4C");
-            list.add("Individual 5A");
-            list.add("Individual 5B");
-            list.add("Individual 5C");
-            list.add("Individual 6A");
-            list.add("Individual 6B");
-            list.add("Individual 6C");
-            list.add("Individual 7A");
-            list.add("Individual 7B");
-            list.add("Individual 7C");
-            list.add("Individual 8A");
-            list.add("Individual 8B");
-            list.add("Individual 8C");
-            list.add("Individual 9A");
-            list.add("Individual 9B");
-            list.add("Individual 9C");
-            list.add("Individual 10A");
-            list.add("Individual 10B");
-            list.add("Individual 10C");
-            list.add("Individual 11A");
-            list.add("Individual 11B");
-            list.add("Individual 11C");
-            list.add("Individual 12A");
-            list.add("Individual 12B");
-            list.add("Individual 12C");
-            list.add("Individual 13A");
-            list.add("Individual 13B");
-            list.add("Individual 13C");
-            list.add("Individual 14A");
-            list.add("Individual 14B");
-            list.add("Individual 14C");
-            list.add("Individual 15A");
-            list.add("Individual 15B");
-            list.add("Individual 15C");
-            list.add("Individual 16A");
-            list.add("Individual 16B");
-            list.add("Individual 16C");
-            list.add("Individual 17A");
-            list.add("Individual 17B");
-            list.add("Individual 17C");
-            list.add("Individual 18A");
-            list.add("Individual 18B");
-            list.add("Individual 18C");
-            list.add("Individual 19A");
-            list.add("Individual 19B");
-            list.add("Individual 19C");
-            list.add("Individual 20A");
-            list.add("Individual 20B");
-            list.add("Individual 20C");
-            list.add("Individual 21A");
-            list.add("Individual 21B");
-            list.add("Individual 21C");
-            list.add("Individual 22A");
-            list.add("Individual 22B");
-            list.add("Individual 22C");
-            list.add("Individual 23A");
-            list.add("Individual 23B");
-            list.add("Individual 23C");
-            list.add("Individual 24A");
-            list.add("Individual 24B");
-            list.add("Individual 24C");
-            list.add("Individual 25A");
-            list.add("Individual 25B");
-            list.add("Individual 25C");
-            list.add("Individual 26A");
-            list.add("Individual 26B");
-            list.add("Individual 26C");
-            list.add("Individual 27A");
-            list.add("Individual 27B");
-            list.add("Individual 27C");
-            list.add("Individual 28A");
-            list.add("Individual 28B");
-            list.add("Individual 28C");
-            list.add("Individual 29A");
-            list.add("Individual 29B");
-            list.add("Individual 29C");
-            list.add("Individual 30A");
-            list.add("Individual 30B");
-            list.add("Individual 30C");
+            list.add("Choose the Day...");
+            list.add("Day 1");
+            list.add("Day 2");
+            list.add("Day 3");
+            list.add("Day 4");
+            list.add("Day 5");
+            list.add("Day 6");
+            list.add("Day 7");
+            list.add("Day 8");
+            list.add("Day 9");
+
 
 
             ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(contxt,android.R.layout.simple_spinner_item, list);
@@ -901,7 +617,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             //layoutx = (LinearLayout)rootView.findViewById(R.id.graph1);
 
 
-            textTime = (TextView) rootView.findViewById(R.id.textView4);
 
             graph = (GraphView) rootView.findViewById(R.id.grapht);
 
@@ -1147,14 +862,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 
                     }
-
-
-                    textTime.setText("-:-");
-                    String timeTest = String.valueOf(getTimeTest());
-                    textTime.setText(timeTest);
-
-
-
                 }
 
                 @Override
